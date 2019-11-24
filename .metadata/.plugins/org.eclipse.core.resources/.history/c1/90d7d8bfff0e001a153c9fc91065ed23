@@ -1,0 +1,18 @@
+package application;
+
+import java.util.Scanner;
+
+import model.entities.Order;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Order order = new Order();
+		
+		
+		sc.close();
+
+	}
+
+}
