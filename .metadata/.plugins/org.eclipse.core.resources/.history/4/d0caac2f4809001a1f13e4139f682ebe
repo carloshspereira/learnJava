@@ -1,0 +1,14 @@
+package entities;
+
+public class ImportedProduct extends Product {
+
+	public ImportedProduct() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public ImportedProduct(String name, Double price) {
+		super(name, price);
+		// TODO Auto-generated constructor stub
+	}
+
+}

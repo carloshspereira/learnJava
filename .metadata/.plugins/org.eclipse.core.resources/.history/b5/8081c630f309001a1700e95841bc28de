@@ -1,0 +1,11 @@
+package exercicio2.entities;
+
+public class PessoaFisica extends Pessoa {
+
+	@Override
+	public Double impostoDeRenda() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

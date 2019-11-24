@@ -1,0 +1,25 @@
+package exercicio1.application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import exercicio1.entity.Rectangle;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		Rectangle r = new Rectangle();
+		r.width = sc.nextDouble();
+		r.height = sc.nextDouble();
+		double area = r.area();
+		double perimeter = r.perimeter();
+		double diagonal = r.diagonal();
+		System.out.println(r);
+		
+		
+
+	}
+
+}

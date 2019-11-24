@@ -1,0 +1,10 @@
+package exercicio3.entity;
+
+public class Student {
+
+	public String name;
+	public double n1;
+	public double n2;
+	public double n3;
+
+}
