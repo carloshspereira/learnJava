@@ -36,8 +36,7 @@ public class Program {
 			}
 			try (BufferedWriter bw = new BufferedWriter(new FileWriter(arquivoSaida))) {
 				for (Product product : order.getProducts()) {
-					bw.write(product.toString());
-					bw.newLine();
+					System.out.println(product);
 				}
 			} catch (IOException e) {
 

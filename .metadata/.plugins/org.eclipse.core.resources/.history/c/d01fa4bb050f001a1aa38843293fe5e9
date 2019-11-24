@@ -1,10 +1,7 @@
 package application;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
@@ -20,32 +17,22 @@ public class Program {
 		Order order = new Order();
 
 		System.out.print("Entre com o caminho de um arquivo CVS:");
-		String arquivoEntrada = sc.nextLine();
-		File arquivo = new File(arquivoEntrada);
-		String path = arquivo.getParent();
-		String pathSaida = path + "\\out";
-		boolean sucesso = new File(pathSaida).mkdir();
-		String arquivoSaida = path + "\\out\\sumary.cvs";
+		String path = sc.nextLine();
 
-		try (BufferedReader br = new BufferedReader(new FileReader(arquivoEntrada))) {
+		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			String linha = br.readLine();
 			while (linha != null) {
 				String itens[] = linha.split(",");
 				order.addProduct(new Product(itens[0], Double.parseDouble(itens[1]), Integer.parseInt(itens[2])));
 				linha = br.readLine();
 			}
-			try (BufferedWriter bw = new BufferedWriter(new FileWriter(arquivoSaida))) {
-				for (Product product : order.getProducts()) {
-					bw.write(product.toString());
-					bw.newLine();
-				}
-			} catch (IOException e) {
 
-			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		for (Product product : order.getProducts()) {
+			System.out.println(product);
+		}
 		sc.close();
 
 	}

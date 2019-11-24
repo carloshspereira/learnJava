@@ -2,3 +2,4 @@
 1574628434308	Rename type 'Order'
 1574628526139	Rename type 'OrderDetail'
 1574629823242	Rename package 'entities'
+1574632788585	Rename local variable 'path'

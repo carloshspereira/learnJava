@@ -26,7 +26,7 @@ public class Program {
 		String pathSaida = path + "\\out";
 		boolean sucesso = new File(pathSaida).mkdir();
 		String arquivoSaida = path + "\\out\\sumary.cvs";
-
+		
 		try (BufferedReader br = new BufferedReader(new FileReader(arquivoEntrada))) {
 			String linha = br.readLine();
 			while (linha != null) {
@@ -34,18 +34,15 @@ public class Program {
 				order.addProduct(new Product(itens[0], Double.parseDouble(itens[1]), Integer.parseInt(itens[2])));
 				linha = br.readLine();
 			}
-			try (BufferedWriter bw = new BufferedWriter(new FileWriter(arquivoSaida))) {
-				for (Product product : order.getProducts()) {
-					bw.write(product.toString());
-					bw.newLine();
-				}
-			} catch (IOException e) {
-
-			}
+try (BufferedWriter bw = new BufferedWriter(new FileWriter(arquivoSaida))){
+	
+}catch (IOException e) {
+	
+}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		
 		sc.close();
 
 	}
